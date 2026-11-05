@@ -1,56 +1,268 @@
-# Welcome to your Expo app 👋
+# 🇧🇹 DrukLearn – Project II
+### Learn Dzongkha, Learn Bhutan.
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+DrukLearn is a mobile-based Dzongkha learning application designed to make learning Bhutan's national language more interactive, accessible, and engaging.
 
-## Get started
+Project II builds upon the original DrukLearn application by introducing an improved learning experience with a structured learning path, daily missions, vocabulary practice, personalized revision, gamification, and Tibetan-script calligraphy practice.
 
-1. Install dependencies
+---
 
-   ```bash
-   npm install
-   ```
+## 📖 Project Overview
 
-2. Start the app
+Learning a new language requires consistent practice and motivation. DrukLearn addresses this by combining interactive lessons, quizzes, writing practice, and gamified learning activities in one mobile application.
 
-   ```bash
-   npx expo start
-   ```
+The application supports two main user roles:
 
-In the output, you'll find options to open the app in a
+- **Students:** Learn Dzongkha, complete lessons, practise vocabulary, attempt quizzes, and track learning progress.
+- **Teachers:** Manage learning content, create quizzes, organize competitions, and monitor student performance.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## ✨ Key Features
 
-You can start developing by editing the files inside the **src/app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+### 1. User Authentication
+- Student and teacher registration.
+- Email and password login.
+- Role-based navigation.
+- Password recovery.
+- Profile management.
 
-## Get a fresh project
+### 2. Interactive Learning
+- Structured lessons organized by topics.
+- Vocabulary and phrase learning.
+- Lesson completion tracking.
+- Access codes for individual lessons and quizzes.
 
-When you're ready, run:
+### 3. Learning Path
+- Organized learning journey through different topics.
+- Locked and unlocked learning nodes.
+- Progress-based topic unlocking.
+- Visual representation of learning progress.
 
-```bash
-npm run reset-project
+### 4. Quizzes and Weekly Competition
+- Multiple-choice quizzes.
+- Teacher-created questions.
+- Automatic answer checking.
+- Weekly learning competitions.
+- Student rankings and leaderboards.
+
+### 5. Calligraphy Practice
+- Practice Tibetan-script characters used for Dzongkha.
+- Trace characters using finger drawing.
+- Faint character guides for tracing.
+- Visual comparison of student drawings with reference characters.
+- Percentage-based tracing score when supported by the device.
+
+### 6. Gamification and Rewards
+- Earn XP by completing learning activities.
+- Level progression.
+- Daily learning streaks.
+- Achievement badges.
+- Weekly and overall leaderboards.
+- Hearts system to encourage careful quiz practice.
+
+### 7. Daily Missions
+- Daily learning challenges.
+- Activity-based progress tracking.
+- XP rewards for completing missions.
+- Daily mission resets.
+
+### 8. Vocabulary and Personalized Review
+- Word of the Day.
+- Vocabulary learning and practice.
+- Save useful words for later revision.
+- Personalized review based on weaker topics.
+- Additional XP for revision activities.
+
+### 9. Notifications
+- Local learning reminders.
+- Daily practice reminders.
+- Streak reminders.
+- Test notification functionality.
+
+### 10. Teacher Dashboard
+- Create, edit, and delete lessons.
+- Create, edit, and delete quizzes.
+- Manage weekly competitions.
+- Manage vocabulary content.
+- View student learning progress.
+- Monitor quiz scores and lesson completion.
+
+---
+
+## 🛠️ Technology Stack
+
+| Technology | Purpose |
+|---|---|
+| React Native | Mobile application development |
+| Expo | Development and testing environment |
+| JavaScript | Application programming language |
+| Expo Router | Navigation and routing |
+| Firebase Authentication | User authentication |
+| Cloud Firestore | Cloud database |
+| React Native Skia | Calligraphy drawing and rendering |
+| AsyncStorage | Local data persistence |
+| Expo Notifications | Local notifications |
+| Git & GitHub | Version control and source code hosting |
+
+---
+
+## 📂 Project Structure
+
+```text
+druklearn/
+│
+├── assets/
+│   └── fonts/
+│       └── TibetanFont.ttf
+│
+├── src/
+│   ├── app/
+│   │   ├── (auth)/
+│   │   ├── (student)/
+│   │   ├── (teacher)/
+│   │   ├── _layout.js
+│   │   └── index.js
+│   │
+│   ├── components/
+│   │   ├── calligraphy/
+│   │   ├── learning/
+│   │   └── ui/
+│   │
+│   ├── config/
+│   ├── constants/
+│   ├── context/
+│   ├── hooks/
+│   ├── services/
+│   └── utils/
+│
+├── .env
+├── .gitignore
+├── app.json
+├── eas.json
+├── package.json
+└── README.md
 ```
 
-This command will move the starter code to the **example** directory and create a blank **src/app** directory where you can start developing.
+---
 
-### Other setup steps
+## ⚙️ Installation and Setup
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
+### Prerequisites
 
-## Learn more
+Install the following before running the project:
 
-To learn more about developing your project with Expo, look at the following resources:
+- Node.js
+- npm
+- Git
+- Visual Studio Code
+- Expo Go (for compatible device testing)
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+### 1. Clone the Repository
 
-## Join the community
+```bash
+git clone https://github.com/kinley-wa/DRUKLEARN_PROJECT_2.git
+```
 
-Join our community of developers creating universal apps.
+### 2. Navigate to the Project
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+```bash
+cd DRUKLEARN_PROJECT_2
+```
+
+### 3. Install Dependencies
+
+```bash
+npm install
+```
+
+### 4. Configure Firebase
+
+Create a `.env` file in the project root and add your Firebase configuration:
+
+```env
+EXPO_PUBLIC_FIREBASE_API_KEY=your_api_key
+EXPO_PUBLIC_FIREBASE_AUTH_DOMAIN=your_auth_domain
+EXPO_PUBLIC_FIREBASE_PROJECT_ID=your_project_id
+EXPO_PUBLIC_FIREBASE_STORAGE_BUCKET=your_storage_bucket
+EXPO_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
+EXPO_PUBLIC_FIREBASE_APP_ID=your_app_id
+```
+
+Replace the placeholder values with your own Firebase project configuration.
+
+Enable Email/Password authentication in Firebase Authentication and configure Cloud Firestore with the required collections and security rules.
+
+### 5. Start the Application
+
+```bash
+npx expo start -c
+```
+
+Scan the QR code using Expo Go to open the application on a compatible device.
+
+---
+
+## 🔥 Firebase Integration
+
+DrukLearn uses Firebase services to support authentication and cloud-based learning data.
+
+Main Firestore collections include:
+
+- `users`
+- `lessons`
+- `quizzes`
+- `competitions`
+- `competition_attempts`
+- `topics`
+- `vocabulary`
+- `dailyMissions`
+- `savedWords`
+- `topicStats`
+
+Additional per-user records support progress, achievements, review, and learning activities.
+
+---
+
+## 🎯 Project Objectives
+
+- Make Dzongkha learning more accessible through mobile technology.
+- Encourage independent and consistent language practice.
+- Improve vocabulary, reading, and writing skills.
+- Provide interactive learning activities.
+- Motivate students through rewards and achievements.
+- Support teachers in managing lessons and monitoring student progress.
+
+---
+
+## ⚠️ Known Limitations
+
+- Calligraphy scoring measures visual shape and position overlap, not stroke order or writing direction.
+- Calligraphy scoring may not be supported on every device.
+- Local notifications have limitations when the application is closed.
+- Expo Go does not fully support remote push notifications; a development build is needed for that functionality.
+- XP, hearts, and access-code checks are primarily client-side and would require additional server-side validation for production security.
+
+---
+
+## 🚀 Future Improvements
+
+- Improve calligraphy recognition and stroke-order evaluation.
+- Add more Dzongkha vocabulary and learning materials.
+- Introduce additional interactive exercises.
+- Improve offline learning support.
+- Add secure server-side validation.
+- Support more language-learning levels.
+- Improve accessibility and user experience.
+
+---
+
+## 👨‍💻 Developer
+
+**Project:** DrukLearn – Project II  
+**Repository:** [DRUKLEARN_PROJECT_2](https://github.com/kinley-wa/DRUKLEARN_PROJECT_2)  
+**Platform:** Android and iOS (Expo-compatible development)
+
+---
+
+### 🇧🇹 DrukLearn
+*Learn Dzongkha, Learn Bhutan.*
+
