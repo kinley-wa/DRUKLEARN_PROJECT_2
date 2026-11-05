@@ -1,0 +1,7 @@
+export const XP = {
+  LESSON_COMPLETE: 50, QUIZ_CORRECT: 10, COMPETITION_CORRECT: 15,
+  REVIEW_CORRECT: 8, VOCAB_CORRECT: 5,
+};
+export const XP_PER_LEVEL = 200;
+export const MAX_HEARTS = 5;
+export const HEART_REGEN_MINUTES = 30;
