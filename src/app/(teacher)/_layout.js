@@ -14,10 +14,12 @@ export default function TeacherLayout() {
       <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
       <Stack.Screen name="lesson-form" options={{ title: "Lesson" }} />
       <Stack.Screen name="quiz-form" options={{ title: "Quiz" }} />
+      <Stack.Screen name="quiz-stats" options={{ title: "Quiz Results" }} />
       <Stack.Screen name="competition-form" options={{ title: "Weekly Competition" }} />
+      <Stack.Screen name="competition-results" options={{ title: "Challenge Results" }} />
       <Stack.Screen name="topic-form" options={{ title: "Learning Path Topic" }} />
       <Stack.Screen name="vocabulary-form" options={{ title: "Vocabulary" }} />
-      <Stack.Screen name="student/[id]" options={{ title: "Student Progress" }} />
+      <Stack.Screen name="student/[id]" options={{ title: "Student" }} />
     </Stack>
   );
 }

@@ -11,6 +11,8 @@ export default function TeacherTabs() {
         headerShown: false,
         tabBarActiveTintColor: colors.gold,
         tabBarInactiveTintColor: colors.textSecondary,
+        tabBarStyle: { height: 62, paddingBottom: 8, paddingTop: 6, borderTopColor: colors.border },
+        tabBarLabelStyle: { fontSize: 11, fontWeight: "700" },
       }}
     >
       <Tabs.Screen name="dashboard" options={{ title: "Dashboard", tabBarIcon: icon("grid") }} />
