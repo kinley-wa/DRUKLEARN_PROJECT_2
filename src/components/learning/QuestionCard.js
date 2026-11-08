@@ -1,11 +1,17 @@
 import { colors } from "@/constants/theme";
 import { Pressable, StyleSheet, Text, View } from "react-native";
+import SpeakButton from "./SpeakButton";
 
 export default function QuestionCard({ question, selected, answered, onSelect }) {
   return (
     <View>
       <View style={s.prompt}>
         <Text style={s.promptText}>{question.text}</Text>
+        {question.speak ? (
+          <View style={{ marginTop: 14 }}>
+            <SpeakButton word={{ romanization: question.speak, word: question.text }} size={30} color="#fff" />
+          </View>
+        ) : null}
       </View>
       {question.options.map((opt, i) => {
         const isSel = selected === i;

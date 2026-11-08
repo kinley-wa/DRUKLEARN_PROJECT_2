@@ -13,13 +13,14 @@ function Gate() {
     if (!navState?.key || loading) return;
     const group = segments[0];
     if (!user) {
+      // index.js (the animated intro) handles the first screen
       if (group !== "(auth)" && group !== undefined) router.replace("/login");
-      return; // app/index.js decides onboarding vs login
+      return;
     }
     if (!profile) return;
     const isTeacher = profile.role === "teacher";
     const wrongArea = (isTeacher && group === "(student)") || (!isTeacher && group === "(teacher)");
-    if (group === "(auth)" || group === undefined || wrongArea) {
+    if (group === "(auth)" || wrongArea) {
       router.replace(isTeacher ? "/dashboard" : "/home");
     }
   }, [navState?.key, user, profile, loading, segments]);
@@ -30,7 +31,7 @@ function Gate() {
 export default function RootLayout() {
   return (
     <AuthProvider>
-      <StatusBar style="dark" />
+      <StatusBar style="light" />
       <Gate />
     </AuthProvider>
   );

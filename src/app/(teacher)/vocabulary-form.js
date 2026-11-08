@@ -38,7 +38,7 @@ export default function VocabularyForm() {
     <Screen hasHeader>
       <Text style={s.h}>{editingId ? "Edit word" : "Add a word"}</Text>
       <AppTextField label="Dzongkha word" value={word} onChangeText={setWord} />
-      <AppTextField label="Romanization (optional)" value={rom} onChangeText={setRom} />
+      <AppTextField label="Romanization (spoken by the sound button)" value={rom} onChangeText={setRom} />
       <AppTextField label="English meaning" value={meaning} onChangeText={setMeaning} autoCapitalize="sentences" />
       <AppTextField label="Example usage (optional)" value={example} onChangeText={setExample} autoCapitalize="sentences" />
       <AppButton title={editingId ? "Save Changes" : "Add Word"} onPress={save} loading={saving} />

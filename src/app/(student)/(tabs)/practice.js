@@ -41,6 +41,7 @@ export default function Practice() {
     <Screen title="Practice" onRefresh={load} refreshing={loading}>
       <Shortcut icon="refresh-circle" color={colors.purple} title="Personalized Review" sub="Extra practice on your weak topics" onPress={() => router.push("/review")} />
       <Shortcut icon="trophy" color={colors.gold} title="Weekly Challenge" sub="Compete with other students" onPress={() => router.push("/competition")} />
+      <Shortcut icon="albums" color={colors.teal} title="Memory Game" sub="Match Dzongkha words with meanings" onPress={() => router.push("/memory-game")} />
       <Text style={s.h}>Quizzes</Text>
       {loading && !quizzes.length ? <LoadingView /> : error ? <ErrorState onRetry={load} /> :
         quizzes.length === 0 ? <EmptyState icon="help-circle-outline" title="No quizzes yet" message="Check back soon." /> :

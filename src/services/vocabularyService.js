@@ -58,8 +58,7 @@ export function buildVocabQuestions(pool, all, count = 5) {
     }
     if (wrong.length < 3) continue; // not enough different meanings for this word
     const options = shuffle([w.meaning, ...wrong]);
-    questions.push({ id: makeId(), text: w.word, options, correctOptionIndex: options.indexOf(w.meaning), category: "Vocabulary" });
-  }
+    questions.push({ id: makeId(), text: w.word, speak: w.romanization, options, correctOptionIndex: options.indexOf(w.meaning), category: "Vocabulary" });  }
   return questions;
 }
 

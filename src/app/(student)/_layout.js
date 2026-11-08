@@ -23,6 +23,7 @@ export default function StudentLayout() {
       <Stack.Screen name="missions" options={{ title: "Daily Missions" }} />
       <Stack.Screen name="vocabulary" options={{ title: "Vocabulary" }} />
       <Stack.Screen name="vocabulary-practice" options={{ title: "Vocabulary Practice" }} />
+      <Stack.Screen name="memory-game" options={{ title: "Memory Game" }} />
       <Stack.Screen name="review" options={{ title: "Personalized Review" }} />
       <Stack.Screen name="achievements" options={{ title: "Achievements" }} />
       <Stack.Screen name="my-progress" options={{ title: "My Progress" }} />
