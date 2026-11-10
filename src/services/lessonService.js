@@ -1,5 +1,5 @@
 import { db } from "@/config/firebase";
-import { collection, deleteDoc, doc, getDoc, getDocs, setDoc } from "firebase/firestore";
+import { collection, deleteDoc, doc, getDoc, getDocs, setDoc, writeBatch } from "firebase/firestore";
 
 export function normalizeLesson(id, d) {
   return {
@@ -27,3 +27,10 @@ export async function saveLesson(input) {
 }
 
 export const deleteLesson = (id) => deleteDoc(doc(db, "lessons", id));
+
+// Puts lessons into a topic by giving them the topic's category.
+export async function moveLessonsToCategory(ids, category) {
+  const batch = writeBatch(db);
+  ids.forEach((lessonId) => batch.update(doc(db, "lessons", lessonId), { category, updatedAt: Date.now() }));
+  await batch.commit();
+}

@@ -14,6 +14,7 @@ export async function getTopic(id) {
 export async function saveTopic({ id, title, category, order }) {
   const ref = id ? doc(db, "topics", id) : doc(collection(db, "topics"));
   await setDoc(ref, { title, category, order });
+  return ref.id;
 }
 export const deleteTopic = (id) => deleteDoc(doc(db, "topics", id));
 

@@ -16,15 +16,14 @@ import { Alert, Pressable, StyleSheet, Text, View } from "react-native";
 const blank = () => ({ content: "", translation: "", exampleDialogue: "" });
 
 export default function LessonForm() {
-  const { id } = useLocalSearchParams();
+  const { id, category: presetCategory } = useLocalSearchParams();
   const router = useRouter();
   const { user } = useAuth();
   const [loading, setLoading] = useState(!!id);
   const [saving, setSaving] = useState(false);
   const [title, setTitle] = useState("");
   const [level, setLevel] = useState("Beginner");
-  const [category, setCategory] = useState(CATEGORY_OPTIONS[0]);
-  const [lessonType, setLessonType] = useState("Vocabulary");
+  const [category, setCategory] = useState(presetCategory || CATEGORY_OPTIONS[0]);  const [lessonType, setLessonType] = useState("Vocabulary");
   const [accessCode, setAccessCode] = useState("");
   const [sections, setSections] = useState([blank()]);
 
